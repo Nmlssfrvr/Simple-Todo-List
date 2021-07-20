@@ -161,21 +161,22 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 3vw;
+  min-height: 4vh;
   border-radius: 0.5vw;
   list-style-type: none;
   cursor: pointer;
   font-size: 2vw;
+  margin-top: 1vh;
 }
 
 @media (hover: hover) {
   li:hover .deleteRow {
-    margin-left: 5px;
+    margin-left: 0.5vw;
     visibility: visible;
   }
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
   li .deleteRow {
     visibility: visible;
   }
@@ -192,7 +193,7 @@ li:nth-child(even) {
 .deleteRow {
   color: black;
   visibility: hidden;
-  padding: 5px;
+  padding: 1vw;
   font-size: 2.5vw;
   -webkit-transition: margin-left 0.5s, visibility 0s;
   transition: margin-left 0.5s, visibility 0s;
