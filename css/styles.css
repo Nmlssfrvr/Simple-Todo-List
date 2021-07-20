@@ -9,33 +9,45 @@
 }
 
 body {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background: linear-gradient(-45deg, #f77750, #f33a81, #30afdd, #1cdaad);
   background-size: 800% 800%;
-  -webkit-animation: gradient 15s ease infinite;
-          animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 16s ease infinite;
+          animation: gradient 16s ease infinite;
 }
 
 @-webkit-keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 75% 50%;
+  }
+  75% {
+    background-position: 100% 75%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
   }
 }
 
 @keyframes gradient {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 75% 50%;
+  }
+  75% {
+    background-position: 100% 75%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 25%;
   }
 }
 
