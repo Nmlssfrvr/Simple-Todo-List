@@ -9,10 +9,10 @@
 }
 
 body {
-  background: linear-gradient(-45deg, #f77750, #f33a81, #30afdd, #1cdaad);
-  background-size: 800% 800%;
-  -webkit-animation: gradient 16s ease infinite;
-          animation: gradient 16s ease infinite;
+  background: linear-gradient(135deg, #f77750, #f33a81, #30afdd, #1cdaad);
+  background-size: 400vmax 400vmax;
+  -webkit-animation: gradient 25s ease infinite;
+          animation: gradient 25s ease infinite;
 }
 
 @-webkit-keyframes gradient {
@@ -29,7 +29,7 @@ body {
     background-position: 100% 75%;
   }
   100% {
-    background-position: 0% 25%;
+    background-position: 25% 0%;
   }
 }
 
@@ -47,11 +47,12 @@ body {
     background-position: 100% 75%;
   }
   100% {
-    background-position: 0% 25%;
+    background-position: 25% 0%;
   }
 }
 
 .container {
+  padding: 0.3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,8 +60,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: auto;
   border-radius: 0.7vw;
+  margin: auto;
   -webkit-box-shadow: 0px 0px 100px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 0px 0px 100px 0px rgba(34, 60, 80, 0.2);
 }

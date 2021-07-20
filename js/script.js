@@ -1,11 +1,8 @@
 window.onload = function()
 {
-  
   AddTodo("First thing");
   AddTodo("Second thing");
-  AddDeleteListenerForCrossesOnload();
   AddListenerForEnterOnload();
-  AddCheckedListenerForLisOnload();
 }
 
 
