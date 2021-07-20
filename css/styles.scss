@@ -154,7 +154,7 @@ li
         }
 
     }
-    @media (pointer: coarse)
+    @media not all and (hover:hover)
     {
         .deleteRow
         {

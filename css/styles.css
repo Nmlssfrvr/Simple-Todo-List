@@ -176,7 +176,7 @@ li {
   }
 }
 
-@media (pointer: coarse) {
+@media not all and (hover: hover) {
   li .deleteRow {
     visibility: visible;
   }
