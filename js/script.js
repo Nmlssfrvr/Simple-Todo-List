@@ -1,32 +1,37 @@
+"use strict";
+
 window.onload = function()
 {
   AddTodo("First thing");
   AddTodo("Second thing");
   AddListenerForEnterOnload();
+  if(IsTouchDevice())
+    ShowCrosses();
+  else
+    HideCrosses();
 }
-
 
 function onAddTodo()
 {
-  let TodoTextNode = document.getElementById("TodoText");
-  if (TodoTextNode?.value?.length !== 0) 
+  let todoTextNode = document.getElementById("TodoText");
+  if (todoTextNode?.value?.length !== 0) 
   {
 
-    AddTodo(TodoTextNode.value);
-    TodoTextNode.value = "";
+    AddTodo(todoTextNode.value);
+    todoTextNode.value = "";
   }
 }
 
-function AddTodo(TodoText)
+function AddTodo(todoText)
 {
   let ul = document.getElementById("TodoList");
   let newSpan = document.createElement("span");
-  newSpan.classList.add("deleteRow");
+  newSpan.classList.add("deleteCross");
   newSpan.append("×");
   let newLi = document.createElement("li");
-  let LiCount = ul.getElementsByTagName("li").length + 1;
+  let liCount = ul.getElementsByTagName("li").length + 1;
   newLi.appendChild(newSpan);
-  newLi.append(TodoText);
+  newLi.append(todoText);
   AddDeleteListenerForCross(newSpan);
   AddCheckedListenerForLi(newLi);
   ul.appendChild(newLi);
@@ -34,7 +39,7 @@ function AddTodo(TodoText)
 
 function AddDeleteListenerForCrossesOnload()
 {
-  let crosses = document.getElementsByClassName("deleteRow");
+  let crosses = document.getElementsByClassName("deleteCross");
   for(let cross of crosses)
   {
     AddDeleteListenerForCross(cross);
@@ -83,4 +88,29 @@ function AddCheckedListenerForLi(li)
     else 
       li.classList.add("checked");
   })
+}
+
+function IsTouchDevice() 
+{
+  return (('ontouchstart' in window) ||
+     (navigator.maxTouchPoints > 0) ||
+     (navigator.msMaxTouchPoints > 0)) || ("ontouchstart" in document.documentElement);
+}
+
+function ShowCrosses()
+{
+  let crosses = document.getElementsByClassName("deleteCross");
+  for(let cross of crosses)
+  {
+    cross.style.visibility = "visible";
+  }
+}
+
+function HideCrosses()
+{
+  let crosses = document.getElementsByClassName("deleteCross");
+  for(let cross of crosses)
+  {
+    cross.style.visibility = "hidden";
+  }
 }

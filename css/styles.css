@@ -106,6 +106,7 @@ h2 {
   font-family: "Mukta-Regular";
   font-size: 5vw;
   text-align: center;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 input {
@@ -169,17 +170,9 @@ li {
   margin-top: 1vh;
 }
 
-@media (hover: hover) {
-  li:hover .deleteRow {
-    margin-left: 0.5vw;
-    visibility: visible;
-  }
-}
-
-@media not all and (hover: hover) {
-  li .deleteRow {
-    visibility: visible;
-  }
+li:hover .deleteCross, li:active .deleteCross {
+  margin-left: 0.5vw;
+  visibility: visible;
 }
 
 li:nth-child(odd) {
@@ -190,7 +183,7 @@ li:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.767);
 }
 
-.deleteRow {
+.deleteCross {
   color: black;
   visibility: hidden;
   padding: 1vw;
