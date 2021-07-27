@@ -7,8 +7,6 @@ window.onload = function()
   AddListenerForEnterOnload();
   if(IsTouchDevice())
     ShowCrosses();
-  else
-    HideCrosses();
 }
 
 function onAddTodo()
@@ -29,7 +27,6 @@ function AddTodo(todoText)
   newSpan.classList.add("deleteCross");
   newSpan.append("×");
   let newLi = document.createElement("li");
-  let liCount = ul.getElementsByTagName("li").length + 1;
   if(IsTouchDevice())
     newSpan.style.visibility = "visible";
   newLi.appendChild(newSpan);
@@ -105,14 +102,5 @@ function ShowCrosses()
   for(let cross of crosses)
   {
     cross.style.visibility = "visible";
-  }
-}
-
-function HideCrosses()
-{
-  let crosses = document.getElementsByClassName("deleteCross");
-  for(let cross of crosses)
-  {
-    cross.style.visibility = "hidden";
   }
 }
