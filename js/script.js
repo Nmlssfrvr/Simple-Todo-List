@@ -30,6 +30,8 @@ function AddTodo(todoText)
   newSpan.append("×");
   let newLi = document.createElement("li");
   let liCount = ul.getElementsByTagName("li").length + 1;
+  if(IsTouchDevice())
+    newSpan.style.visibility = "visible";
   newLi.appendChild(newSpan);
   newLi.append(todoText);
   AddDeleteListenerForCross(newSpan);
